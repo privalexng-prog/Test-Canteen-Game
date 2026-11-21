@@ -3257,7 +3257,7 @@
         }
 
         // Calculate target swim velocity with water drag
-        const baseSpeed = p.isGK ? 134 : (ball.owner === p ? 164 : 180);
+        const baseSpeed = p.isGK ? 124 : (ball.owner === p ? 164 : 180);
         const speed = isSprinting ? baseSpeed * 1.48 : baseSpeed;
         const targetVx = moveX * speed;
         const targetVy = moveY * speed;
@@ -3335,7 +3335,7 @@
             sprint = true;
 
             const distToBall = Math.hypot(ball.x - p.x, ball.y - p.y);
-            if ((distToBall < 96 || timeToGoal < 0.21) && p.blockCooldown <= 0 && p.state !== 'block') {
+            if ((distToBall < 82 || timeToGoal < 0.21) && p.blockCooldown <= 0 && p.state !== 'block') {
               triggerShotBlock(p);
               // Give GK a realistic lateral dive push toward predicted shot Y
               const diveDiff = ty - p.y;
